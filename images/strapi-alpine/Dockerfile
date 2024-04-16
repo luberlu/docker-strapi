@@ -1,11 +1,11 @@
 # BASE
-ARG NODE_VERSION=18
+ARG NODE_VERSION=21
 FROM node:${NODE_VERSION}-alpine AS base-alpine
 EXPOSE 1337
 
 FROM base-alpine
 
-ARG STRAPI_VERSION=latest
+ARG STRAPI_VERSION=4.23.0
 
 RUN yarn global add @strapi/strapi@${STRAPI_VERSION}
 
